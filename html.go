@@ -478,9 +478,9 @@ func (options *Html) CodeSpan(out *bytes.Buffer, text []byte) {
 }
 
 func (options *Html) DoubleEmphasis(out *bytes.Buffer, text []byte) {
-	out.WriteString("<strong>")
+	out.WriteString("<b>")
 	out.Write(text)
-	out.WriteString("</strong>")
+	out.WriteString("</b>")
 }
 
 func (options *Html) Emphasis(out *bytes.Buffer, text []byte) {
@@ -591,9 +591,9 @@ func (options *Html) RawHtmlTag(out *bytes.Buffer, text []byte) {
 }
 
 func (options *Html) TripleEmphasis(out *bytes.Buffer, text []byte) {
-	out.WriteString("<strong><em>")
+	out.WriteString("<b><em>")
 	out.Write(text)
-	out.WriteString("</em></strong>")
+	out.WriteString("</em></b>")
 }
 
 func (options *Html) StrikeThrough(out *bytes.Buffer, text []byte) {
