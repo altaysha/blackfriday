@@ -391,11 +391,11 @@ func (options *Html) ListItem(out *bytes.Buffer, text []byte, flags int) {
 		doubleSpace(out)
 	}
 	if flags&LIST_TYPE_TERM != 0 {
-		out.WriteString("<dt>")
+		out.WriteString("<dt>&bull;&nbsp;")
 	} else if flags&LIST_TYPE_DEFINITION != 0 {
-		out.WriteString("<dd>")
+		out.WriteString("<dd>&bull;&nbsp;")
 	} else {
-		out.WriteString("<li>")
+		out.WriteString("<li>&bull;&nbsp;")
 	}
 	out.Write(text)
 	if flags&LIST_TYPE_TERM != 0 {
